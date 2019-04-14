@@ -1,0 +1,32 @@
+{
+  "name": "code-monkey-king",
+  "version": "1.0.0",
+  "description": "My visit card",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksimKorzh/code-monkey-king.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Maksim Korzh",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^7.3.8",
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+    "nodemon": "^1.18.10"
+  },
+  "bugs": {
+    "url": "https://github.com/maksimKorzh/code-monkey-king/issues"
+  },
+  "homepage": "https://github.com/maksimKorzh/code-monkey-king#readme"
+}
