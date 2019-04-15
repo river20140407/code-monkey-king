@@ -36,6 +36,17 @@ router.get('/api/posts', (req, res) => {
   })
 });
 
+// Add post
+router.post('/api/posts', (req, res) => {
+  var post = req.body;
+  Post.addPost(post, (err, task) => {
+    if(err){
+      throw err;
+    }
+    res.json(post);
+  })
+});
+
 // Get soft
 router.get('/api/soft', (req, res) => {
   Soft.getSoft((err, soft) => {

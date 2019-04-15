@@ -1,33 +1,33 @@
 <div class="col" ng-init="getSoft()">
-  <div class="card">
-    <div class="card-header">
+  <div class="card bg-secondary">
+    <div class="card-header mx-auto bg-secondary text-white-50">
       Free software by Code Monkey King
     </div>
+    <div class="bg fill">
     <div class="card-body">
-
-
-      <div class="row">
-
-
-        <div class="col-md-4" ng-repeat="product in soft.data">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                </div>            
+    <button type="button" class="btn btn-secondary bg-dark" onClick="history.back()">Back</button>      
+    </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4" ng-repeat="product in soft.data">
+            <div class="card mb-4 shadow-sm transparent">
+              <div class="card-body">
+                  <div class="card-header">
+                    <h3>{{ product.name }}</h3>
+                    <span class="badge badge-secondary">by {{ product.author }}</span>
+                  </div>          
+                  <p class="card-text">{{ product.description }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{{ product.source_url }}" class="btn btn-sm btn-outline-secondary">Source code</a>
+                      <a href="{{ product.release_url }}" class="btn btn-sm btn-outline-secondary">Download</a>
+                    </div>
+                  </div>                              
+              </div>
             </div>
           </div>
-        </div>
-
-
-
+        </div>  
       </div>
-    
-      
     </div>
   </div>
 </div>

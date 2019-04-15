@@ -22,6 +22,10 @@ const softSchema = mongoose.Schema({
     type: String,
     require: true
   },
+  author:{
+    type: String,
+    require: true
+  },
   create_date:{
     type: Date,
     default: Date.now

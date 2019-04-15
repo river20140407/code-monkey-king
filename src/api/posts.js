@@ -14,6 +14,9 @@ const postSchema = mongoose.Schema({
     type: String,
     require: true
   },
+  comments:{
+    type: Array
+  },
   create_date:{
     type: Date,
     default: Date.now
@@ -22,7 +25,12 @@ const postSchema = mongoose.Schema({
 
 const Post = module.exports = mongoose.model('Post', postSchema, "posts");
 
-// Get products
+// Get posts
 module.exports.getPosts = (callback, limit) => {
   Post.find(callback).limit(limit);
+}
+
+// Add post
+module.exports.addPost = (post, callback) => {
+  Post.create(post, callback);
 }

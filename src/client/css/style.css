@@ -1,0 +1,34 @@
+body {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.bg {
+  background: url('/images/home.jpg') no-repeat center center fixed;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.fill { 
+    min-height: 82%;
+    height: 82%;
+}
+
+.glass {
+  background-color: rgba(245, 245, 245, 0.3);
+}
+
+.transparent {
+  background-color: rgba(245, 245, 245, 0.6);
+}
+
+.face{
+  width:30%;
+}
+
+.noresize {
+   resize: none;
+}
