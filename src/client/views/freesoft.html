@@ -3,7 +3,7 @@
     <div class="card-header mx-auto bg-secondary text-white-50">
       Free software by Code Monkey King
     </div>
-    <div class="bg fill">
+    <div class="bg">
     <div class="card-body">
     <button type="button" class="btn btn-secondary bg-dark" onClick="history.back()">Back</button>      
     </div>
@@ -19,8 +19,8 @@
                   <p class="card-text">{{ product.description }}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href="{{ product.source_url }}" class="btn btn-sm btn-outline-secondary">Source code</a>
-                      <a href="{{ product.release_url }}" class="btn btn-sm btn-outline-secondary">Download</a>
+                      <a ng-if="product.source_url" href="{{ product.source_url }}" class="btn btn-sm btn-outline-secondary">Source code</a>
+                      <a ng-if="product.release_url" href="{{ product.release_url }}" class="btn btn-sm btn-outline-secondary">Download</a>
                     </div>
                   </div>                              
               </div>

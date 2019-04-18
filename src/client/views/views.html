@@ -1,0 +1,59 @@
+<div class="col" ng-init="getViews(); updateViews()">
+  <div class="bg fill">
+
+    <div class="card-header mx-auto bg-secondary text-white-50 text-center">
+      Page views
+    </div>
+
+    <div class="card-body">
+    <button type="button" class="btn btn-secondary bg-dark" onClick="history.back()">Back</button>      
+    </div>
+
+
+
+    <div class="col">
+      <div class="row">
+    
+        <div class="card-deck mb-3 text-center col-md-6  mx-auto">
+          <div class="card mb-4 shadow-sm transparent">
+            <div class="card-body">
+
+              <table class="table text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Page</th>
+                    <th scope="col">Views</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Home</td>
+                    <td>{{ views.data[0].home }}</td>
+                  </tr>
+                  <tr>
+                    <td>Free software</td>
+                    <td>{{ views.data[0].soft }}</td>
+                  </tr>
+                  <tr>
+                    <td>Community</td>
+                    <td>{{ views.data[0].chat }}</td>
+                  </tr>
+                  <tr>
+                    <td>Author</td>
+                    <td>{{ views.data[0].author }}</td>
+                  </tr>
+                  <tr>
+                    <td>Donations</td>
+                    <td>{{ views.data[0].donor }}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

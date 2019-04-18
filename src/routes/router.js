@@ -1,7 +1,7 @@
 // Import task handker
 const Post = require('../api/posts');
 const Soft = require('../api/software');
-
+const View = require('../api/views');
 
 // Init router
 const express = require('express');
@@ -54,6 +54,28 @@ router.get('/api/soft', (req, res) => {
       throw err;
     }
     res.json(soft);
+  })
+});
+
+// Get views
+router.get('/api/views', (req, res) => {
+  View.getViews((err, views) => {
+    if(err){
+      throw err;
+    }
+    res.json(views);
+  })
+});
+
+// Update views
+router.put('/api/views/:_id', (req, res) => {
+  var id = req.params._id;
+  var updated = req.body;
+  View.updateViews(id, updated, {}, (err, updated) => {
+    if(err){
+      throw err;
+    }
+    res.json(updated);
   })
 });
 

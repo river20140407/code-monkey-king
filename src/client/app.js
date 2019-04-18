@@ -18,7 +18,20 @@ app.config(function($routeProvider){
 			controller:'PostController',
 			templateUrl: '/views/community.html'
 	})
+	.when('/views', {
+			controller:'ViewController',
+			templateUrl: '/views/views.html'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});
+});
+
+app.filter('reverse', function() {
+  return function(items) {
+    if (!items) {
+      return;
+    }
+    return items.slice().reverse();
+  };
 });
