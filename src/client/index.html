@@ -22,25 +22,19 @@
               <a class="nav-link" href="#!/community">Community</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.fiverr.com/maksymkorzh?up_rollout=true">Business enquiries</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#!/author">Author</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#!/donations">Donations</a>
+              <a class="nav-link" href="#!/donations">Donations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" target="_blank" href="http://cmkanalytics.herokuapp.com/">Dashboard</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
-</head>
-
-<body>
-
-  <div ng-view></div>
 
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/angular/angular.js"></script>
@@ -50,37 +44,21 @@
   <script src="/controllers/posts.js"></script>
   <script src="/controllers/soft.js"></script>
   <script src="/controllers/views.js"></script>
+  
+  <!-- Analytics -->
+  <script type="text/javascript">
+    $.post('https://cmkanalytics.herokuapp.com/api/post', {
+      date: new Date,
+      url: window.location.href
+    });
+  </script>
+  
+</head>
+
+<body>
+
+  <div ng-view></div>
 
 </body>
-
-<footer>
-  <!-- Footer -->  
-  <div class="col">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#!/freesoft">Free software</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#!/community">Community</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.fiverr.com/maksymkorzh?up_rollout=true">Business enquiries</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#!/donations">Donations</a>
-            </li>
-          </ul>
-        </div>      
-    </nav>
-  </div>
-</footer>
 
 </html>
